@@ -66,19 +66,19 @@ class _BottomSheetWidgetState extends State<BottomSheetWidget> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       'Add Contact',
                       style: headStyle1,
                     ),
-                    Gap(20),
-                    Text(
+                    const Gap(20),
+                    const Text(
                       'Name',
                       style: headStyle3,
                     ),
-                    Gap(8),
+                    const Gap(8),
                     TextFormField(
                       controller: _nameController,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         hintText: 'Name',
                         border: OutlineInputBorder(),
                       ),
@@ -89,15 +89,15 @@ class _BottomSheetWidgetState extends State<BottomSheetWidget> {
                         return null;
                       },
                     ),
-                    Gap(16),
-                    Text(
+                    const Gap(16),
+                    const Text(
                       'Phone',
                       style: headStyle3,
                     ),
-                    Gap(8),
+                    const Gap(8),
                     TextFormField(
                       controller: _phoneController,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         hintText: '+234',
                         border: OutlineInputBorder(),
                       ),
@@ -108,15 +108,15 @@ class _BottomSheetWidgetState extends State<BottomSheetWidget> {
                         return null;
                       },
                     ),
-                    Gap(16),
-                    Text(
+                    const Gap(16),
+                    const Text(
                       'Email',
                       style: headStyle3,
                     ),
-                    Gap(8),
+                    const Gap(8),
                     TextFormField(
                       controller: _emailController,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         hintText: 'example@email.com',
                         border: OutlineInputBorder(),
                       ),
@@ -127,15 +127,15 @@ class _BottomSheetWidgetState extends State<BottomSheetWidget> {
                         return null;
                       },
                     ),
-                    Gap(16),
-                    Text(
+                    const Gap(16),
+                    const Text(
                       'Home Address',
                       style: headStyle3,
                     ),
-                    Gap(8),
+                    const Gap(8),
                     TextFormField(
                       controller: _locationController,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         hintText: 'Enter address of contact',
                         border: OutlineInputBorder(),
                       ),
@@ -146,7 +146,7 @@ class _BottomSheetWidgetState extends State<BottomSheetWidget> {
                         return null;
                       },
                     ),
-                    Gap(16),
+                    const Gap(16),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           minimumSize: const Size(double.infinity, 48),
@@ -166,7 +166,7 @@ class _BottomSheetWidgetState extends State<BottomSheetWidget> {
                           Navigator.pop(context);
                         }
                       },
-                      child: Text('Add Contact'),
+                      child: const Text('Add Contact'),
                     ),
                   ],
                 ),

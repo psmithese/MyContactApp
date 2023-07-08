@@ -28,28 +28,28 @@ class _SignInScreenState extends State<SignInScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Align(
+                const Align(
                     alignment: Alignment.center,
                     child: Text('MyContactApp', style: headStyle4)),
-                Gap(50),
-                Text(
+                const Gap(50),
+                const Text(
                   'Sign in',
                   style: headStyle4,
                 ),
-                Gap(8),
-                Text(
+                const Gap(8),
+                const Text(
                   'Log into your mycontactapp account',
                   style: subHeadStyle,
                 ),
-                Gap(16),
-                Text(
+                const Gap(16),
+                const Text(
                   'Email',
                   style: headStyle2,
                 ),
                 const Gap(8),
                 TextFormField(
                   keyboardType: TextInputType.emailAddress,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       hintText: 'example@email.com',
                       border: OutlineInputBorder()),
                   validator: (value) {
@@ -63,7 +63,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   },
                 ),
                 const Gap(16),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text('Password', style: headStyle2),
@@ -85,7 +85,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   onSaved: (value) {
                     _password = value?.trim();
                   },
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       hintText: '********', border: OutlineInputBorder()),
                 ),
                 const Gap(16),
@@ -95,7 +95,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => ContactList()));
+                              builder: (context) => const ContactList()));
                     }
                   },
                   style: ElevatedButton.styleFrom(
@@ -109,7 +109,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
+                    const Text(
                       "Don't have an account?",
                       style: subHeadStyle,
                     ),
@@ -120,7 +120,7 @@ class _SignInScreenState extends State<SignInScreen> {
                               MaterialPageRoute(
                                   builder: (context) => const SignUpScreen()));
                         },
-                        child: Text(
+                        child: const Text(
                           'Sign Up',
                           style: headStyle1,
                         ))

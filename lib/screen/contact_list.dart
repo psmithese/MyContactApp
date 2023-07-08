@@ -14,7 +14,7 @@ class ContactList extends StatelessWidget {
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
-        return AddContactBottomSheet();
+        return const AddContactBottomSheet();
       },
     );
   }
@@ -26,14 +26,14 @@ class ContactList extends StatelessWidget {
         body: Consumer<ContactProvider>(builder: (context, provider, child) {
       final contacts = provider.contacts;
       if (contacts.isEmpty) {
-        return Center(
+        return const Center(
           child: ContactHomeScreen(),
         );
       } else {
         return SafeArea(
           child: Column(
             children: [
-              ListTile(
+              const ListTile(
                 title: Text(
                   'Hi,',
                   style: headStyle4,
@@ -50,23 +50,23 @@ class ContactList extends StatelessWidget {
                   ),
                 ),
               ),
-              Gap(20),
+              const Gap(20),
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
+                    const Text(
                       'My Contacts',
                       style: headStyle4,
                     ),
                     ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                            backgroundColor: Color(0xff21244A)),
+                            backgroundColor: const Color(0xff21244A)),
                         onPressed: () {
                           return _showAddContactBottomSheet(context);
                         },
-                        child: Icon(Icons.add))
+                        child: const Icon(Icons.add))
                   ],
                 ),
               ),
@@ -80,7 +80,7 @@ class ContactList extends StatelessWidget {
                         child: Card(
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(6.0),
-                            side: BorderSide(
+                            side: const BorderSide(
                               color: Color(0xffd9d9d9),
                             ),
                           ),
@@ -92,9 +92,9 @@ class ContactList extends StatelessWidget {
                                   width: double.infinity,
                                   height: 40,
                                   decoration: BoxDecoration(
-                                      color: Color(0xfffff4f4),
+                                      color: const Color(0xfffff4f4),
                                       border: Border.all(
-                                          color: Color(0xffd9d9d9),
+                                          color: const Color(0xffd9d9d9),
                                           strokeAlign:
                                               BorderSide.strokeAlignCenter)),
                                   child: Padding(
@@ -108,27 +108,27 @@ class ContactList extends StatelessWidget {
                                           contact.name,
                                           style: headStyle4,
                                         ),
-                                        Icon(Icons.more_vert),
+                                        const Icon(Icons.more_vert),
                                       ],
                                     ),
                                   ),
                                 ),
                               ),
-                              Gap(8),
+                              const Gap(8),
                               Padding(
                                 padding:
                                     const EdgeInsets.only(left: 16, right: 16),
                                 child: Row(
                                   children: [
-                                    Icon(Icons.call_outlined),
-                                    Gap(5),
+                                    const Icon(Icons.call_outlined),
+                                    const Gap(5),
                                     Text(
                                       contact.phoneNumber,
                                       style: headStyle2,
                                     ),
-                                    Gap(10),
-                                    Icon(Icons.mail_outline),
-                                    Gap(5),
+                                    const Gap(10),
+                                    const Icon(Icons.mail_outline),
+                                    const Gap(5),
                                     Flexible(
                                       child: Text(
                                         contact.email, style: headStyle2,
@@ -138,13 +138,13 @@ class ContactList extends StatelessWidget {
                                   ],
                                 ),
                               ),
-                              Gap(8),
+                              const Gap(8),
                               Padding(
                                 padding:
                                     const EdgeInsets.only(left: 16, right: 26),
                                 child: Row(
                                   children: [
-                                    Icon(Icons.location_on_outlined),
+                                    const Icon(Icons.location_on_outlined),
                                     Flexible(
                                         child: Text(
                                       contact.location,
@@ -153,7 +153,7 @@ class ContactList extends StatelessWidget {
                                   ],
                                 ),
                               ),
-                              Gap(16)
+                              const Gap(16)
                             ],
                           ),
                         ),
@@ -169,6 +169,8 @@ class ContactList extends StatelessWidget {
 }
 
 class AddContactBottomSheet extends StatefulWidget {
+  const AddContactBottomSheet({super.key});
+
   @override
   _AddContactBottomSheetState createState() => _AddContactBottomSheetState();
 }
@@ -201,25 +203,25 @@ class _AddContactBottomSheetState extends State<AddContactBottomSheet> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(16.0),
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(
+            const Text(
               'Add Contact',
               style: headStyle1,
             ),
-            Gap(20),
-            Text(
+            const Gap(20),
+            const Text(
               'Name',
               style: headStyle3,
             ),
-            Gap(8),
+            const Gap(8),
             TextFormField(
               controller: _nameController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: 'Name',
                 border: OutlineInputBorder(),
               ),
@@ -230,15 +232,15 @@ class _AddContactBottomSheetState extends State<AddContactBottomSheet> {
                 return null;
               },
             ),
-            Gap(16),
-            Text(
+            const Gap(16),
+            const Text(
               'Phone',
               style: headStyle3,
             ),
-            Gap(8),
+            const Gap(8),
             TextFormField(
               controller: _phoneController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: '+234',
                 border: OutlineInputBorder(),
               ),
@@ -249,15 +251,15 @@ class _AddContactBottomSheetState extends State<AddContactBottomSheet> {
                 return null;
               },
             ),
-            Gap(16),
-            Text(
+            const Gap(16),
+            const Text(
               'Email',
               style: headStyle3,
             ),
-            Gap(8),
+            const Gap(8),
             TextFormField(
               controller: _emailController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: 'example@email.com',
                 border: OutlineInputBorder(),
               ),
@@ -268,15 +270,15 @@ class _AddContactBottomSheetState extends State<AddContactBottomSheet> {
                 return null;
               },
             ),
-            Gap(16),
-            Text(
+            const Gap(16),
+            const Text(
               'Home Address',
               style: headStyle3,
             ),
-            Gap(8),
+            const Gap(8),
             TextFormField(
               controller: _locationController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: 'Enter address of contact',
                 border: OutlineInputBorder(),
               ),
@@ -287,12 +289,12 @@ class _AddContactBottomSheetState extends State<AddContactBottomSheet> {
                 return null;
               },
             ),
-            Gap(16),
+            const Gap(16),
             ElevatedButton(
               onPressed: () {
                 return _addContact(context);
               },
-              child: Text('Add Contact'),
+              child: const Text('Add Contact'),
             ),
           ],
         ),

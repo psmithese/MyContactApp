@@ -28,13 +28,13 @@ class _VerificationScreenState extends State<VerificationScreen> {
                 color: Colors.white,
               ),
             ),
-            Gap(25),
-            Text(
+            const Gap(25),
+            const Text(
               'Verification email sent!',
               style: headStyle4,
             ),
-            Gap(16),
-            Align(
+            const Gap(16),
+            const Align(
               alignment: Alignment.center,
               child: Text(
                 'Please check your email to verify your \nmycontactapp account',
@@ -42,11 +42,11 @@ class _VerificationScreenState extends State<VerificationScreen> {
                 textAlign: TextAlign.center,
               ),
             ),
-            Gap(25),
+            const Gap(25),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => SignInScreen()));
+                    MaterialPageRoute(builder: (context) => const SignInScreen()));
               },
               style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xff21244A)),

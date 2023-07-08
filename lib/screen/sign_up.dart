@@ -39,25 +39,25 @@ class _SignUpScreenState extends State<SignUpScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Align(
+                const Align(
                     alignment: Alignment.center,
                     child: Text('MyContactApp', style: headStyle4)),
-                Gap(30),
-                Text(
+                const Gap(30),
+                const Text(
                   'Sign Up',
                   style: headStyle4,
                 ),
-                Gap(8),
-                Text(
+                const Gap(8),
+                const Text(
                   'create your mycontactapp account',
                   style: subHeadStyle,
                 ),
-                Gap(16),
-                Text(
+                const Gap(16),
+                const Text(
                   'Email',
                   style: headStyle2,
                 ),
-                Gap(8),
+                const Gap(8),
                 TextFormField(
                   validator: (value) {
                     if (value!.isEmpty) {
@@ -66,16 +66,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     return null;
                   },
                   controller: _emailController,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       hintText: 'example@email.com',
                       border: OutlineInputBorder()),
                 ),
-                Gap(16),
-                Text(
+                const Gap(16),
+                const Text(
                   'Password',
                   style: headStyle2,
                 ),
-                Gap(8),
+                const Gap(8),
                 TextFormField(
                   controller: _passwordController,
                   obscureText: _obscureText,
@@ -100,14 +100,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         },
                       ),
                       hintText: '********',
-                      border: OutlineInputBorder()),
+                      border: const OutlineInputBorder()),
                 ),
-                Gap(16),
-                Text(
+                const Gap(16),
+                const Text(
                   'Confirm Password',
                   style: headStyle2,
                 ),
-                Gap(8),
+                const Gap(8),
                 TextFormField(
                   obscureText: _obscureText2,
                   controller: _confirmPasswordController,
@@ -132,16 +132,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         },
                       ),
                       hintText: '********',
-                      border: OutlineInputBorder()),
+                      border: const OutlineInputBorder()),
                 ),
-                Gap(16),
+                const Gap(16),
                 ElevatedButton(
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => VerificationScreen()));
+                              builder: (context) => const VerificationScreen()));
                     }
                   },
                   style: ElevatedButton.styleFrom(
@@ -155,7 +155,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
+                    const Text(
                       "Already have an account?",
                       style: subHeadStyle,
                     ),
@@ -164,9 +164,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => SignInScreen()));
+                                  builder: (context) => const SignInScreen()));
                         },
-                        child: Text(
+                        child: const Text(
                           'Sign In',
                           style: headStyle2,
                         ))

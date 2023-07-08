@@ -18,7 +18,7 @@ class _ContactHomeScreenState extends State<ContactHomeScreen> {
       body: SafeArea(
           child: Column(
         children: [
-          ListTile(
+          const ListTile(
             title: Text(
               'Hi,',
               style: headStyle4,
@@ -27,7 +27,7 @@ class _ContactHomeScreenState extends State<ContactHomeScreen> {
               'How are you doing today?',
               style: subHeadStyle,
             ),
-            trailing: const CircleAvatar(
+            trailing: CircleAvatar(
               backgroundColor: Color(0xffC2C6FF),
               child: Icon(
                 Icons.notifications_none_outlined,
@@ -35,7 +35,7 @@ class _ContactHomeScreenState extends State<ContactHomeScreen> {
               ),
             ),
           ),
-          Gap(30),
+          const Gap(30),
           const CircleAvatar(
             backgroundColor: Color(0xffe7e7ff),
             maxRadius: 90,
@@ -45,24 +45,24 @@ class _ContactHomeScreenState extends State<ContactHomeScreen> {
               size: 80,
             ),
           ),
-          Gap(20),
-          Text(
+          const Gap(20),
+          const Text(
             'No Contact',
             style: headStyle4,
           ),
-          Gap(8),
-          Text(
+          const Gap(8),
+          const Text(
             'To start adding your contacts, tap on the "Add"  \nbutton below',
             style: subHeadStyle,
             textAlign: TextAlign.center,
           ),
-          Gap(20),
+          const Gap(20),
           ElevatedButton(
             onPressed: () {
               showModalBottomSheet(
                 context: context,
                 builder: (BuildContext context) {
-                  return BottomSheetWidget();
+                  return const BottomSheetWidget();
                 },
               );
               // Navigator.push(context,

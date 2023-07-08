@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:mycontactapp/model/contact.dart';
 
 class ContactProvider extends ChangeNotifier {
-  List<Contact> _contacts = [];
+  final List<Contact> _contacts = [];
 
   List<Contact> get contacts => _contacts;
 
